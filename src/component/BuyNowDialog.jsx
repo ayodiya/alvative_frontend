@@ -4,10 +4,9 @@ import DialogContent from '@mui/material/DialogContent'
 import TextField from '@mui/material/TextField'
 import Box from '@mui/material/Box'
 import { useState } from 'react'
-import { flattenOptionGroups } from '@mui/base'
 import { Button } from '@mui/material'
 
-export default function BuyNowDialog ({ handleOpenDialog, openDialog, initializePayment }) {
+export default function BuyNowDialog ({ handleOpenDialog, openDialog, initializePayment, loading }) {
   const [email, setEmail] = useState('')
   const [error, setError] = useState(false)
 
@@ -75,7 +74,7 @@ export default function BuyNowDialog ({ handleOpenDialog, openDialog, initialize
                 type='submit'
                 variant='contained'
               >
-                Pay
+                {loading ? 'Submitting' : 'Pay'}
               </Button>
             </Box>
           </form>

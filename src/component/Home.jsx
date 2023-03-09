@@ -96,10 +96,11 @@ export default function Home () {
             }}
           >
             <Button
+              disabled={loading}
               onClick={handleOpenDialog}
               variant='contained'
             >
-              Buy NOw
+              Buy Now
             </Button>
           </Box>
         </Stack>
